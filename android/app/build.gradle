@@ -20,6 +20,12 @@ android {
     }
 
     defaultConfig {
+        // SDKの最低バージョンを20に設定
+        minSdkVersion 20
+
+        // Google Maps APIキーをgradle.propertiesから読み込む
+        buildConfigField "String", "GOOGLE_MAPS_API_KEY", "\"${GOOGLE_MAPS_API_KEY}\""
+
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId = "com.example.cafe_navigator_for_chain"
         // You can update the following values to match your application needs.
